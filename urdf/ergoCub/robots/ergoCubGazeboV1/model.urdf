@@ -2671,268 +2671,268 @@
   </joint>
   <link name="base_link"/>
   <joint name="base_link_fixed_joint" type="fixed">
-  <origin xyz="0 0 0" rpy="0 -0 0"/>
-  <axis xyz="0 0 0"/>
-  <parent link="root_link"/>
-  <child link="base_link"/>
-</joint>
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <axis xyz="0 0 0"/>
+    <parent link="root_link"/>
+    <child link="base_link"/>
+  </joint>
   <gazebo reference="r_arm_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="l_arm_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
-  <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_torso.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_torso" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_torso.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="torso_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="torso_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="torso_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_shoulder_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_shoulder_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_shoulder_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_shoulder_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_shoulder_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_shoulder_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_leg_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="l_foot_front_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="l_foot_rear_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="l_foot_front">
-  <collision> <surface> <bounce>
-    <restitution_coefficient>0</restitution_coefficient>
-    <threshold>100000</threshold>
-  </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
-  <kp>18000000</kp>
-  <kd>100</kd>
-  <maxVel>100</maxVel>
-  <minDepth>0.0001</minDepth>
-  <mu1>1</mu1>
-  <mu2>1</mu2>
-  <fdir1>0 0 0</fdir1>
-</gazebo>
+    <collision> <surface> <bounce>
+      <restitution_coefficient>0</restitution_coefficient>
+      <threshold>100000</threshold>
+    </bounce> </surface> </collision>
+    <maxContacts>4</maxContacts>
+    <kp>18000000</kp>
+    <kd>100</kd>
+    <maxVel>100</maxVel>
+    <minDepth>0.0001</minDepth>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <fdir1>0 0 0</fdir1>
+  </gazebo>
   <gazebo reference="l_foot_rear">
-  <collision> <surface> <bounce>
-    <restitution_coefficient>0</restitution_coefficient>
-    <threshold>100000</threshold>
-  </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
-  <kp>18000000</kp>
-  <kd>100</kd>
-  <maxVel>100</maxVel>
-  <minDepth>0.0001</minDepth>
-  <mu1>1</mu1>
-  <mu2>1</mu2>
-  <fdir1>0 0 0</fdir1>
-</gazebo>
+    <collision> <surface> <bounce>
+      <restitution_coefficient>0</restitution_coefficient>
+      <threshold>100000</threshold>
+    </bounce> </surface> </collision>
+    <maxContacts>4</maxContacts>
+    <kp>18000000</kp>
+    <kd>100</kd>
+    <maxVel>100</maxVel>
+    <minDepth>0.0001</minDepth>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <fdir1>0 0 0</fdir1>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_leg.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_left_leg" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_leg.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="l_hip_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_hip_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_hip_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_knee">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_ankle_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="l_ankle_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_leg_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="r_foot_front_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="r_foot_rear_ft_sensor">
-<preserveFixedJoint>true</preserveFixedJoint>
-<!-- For compatibility with SDFormat < 4.4 -->
-<disableFixedJointLumping>true</disableFixedJointLumping>
-</gazebo>
+    <preserveFixedJoint>true</preserveFixedJoint>
+    <!-- For compatibility with SDFormat < 4.4 -->
+    <disableFixedJointLumping>true</disableFixedJointLumping>
+  </gazebo>
   <gazebo reference="r_foot_front">
-  <collision> <surface> <bounce>
-    <restitution_coefficient>0</restitution_coefficient>
-    <threshold>100000</threshold>
-  </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
-  <kp>18000000</kp>
-  <kd>100</kd>
-  <maxVel>100</maxVel>
-  <minDepth>0.0001</minDepth>
-  <mu1>1</mu1>
-  <mu2>1</mu2>
-  <fdir1>0 0 0</fdir1>
-</gazebo>
+    <collision> <surface> <bounce>
+      <restitution_coefficient>0</restitution_coefficient>
+      <threshold>100000</threshold>
+    </bounce> </surface> </collision>
+    <maxContacts>4</maxContacts>
+    <kp>18000000</kp>
+    <kd>100</kd>
+    <maxVel>100</maxVel>
+    <minDepth>0.0001</minDepth>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <fdir1>0 0 0</fdir1>
+  </gazebo>
   <gazebo reference="r_foot_rear">
-  <collision> <surface> <bounce>
-    <restitution_coefficient>0</restitution_coefficient>
-    <threshold>100000</threshold>
-  </bounce> </surface> </collision>
-  <maxContacts>4</maxContacts>
-  <kp>18000000</kp>
-  <kd>100</kd>
-  <maxVel>100</maxVel>
-  <minDepth>0.0001</minDepth>
-  <mu1>1</mu1>
-  <mu2>1</mu2>
-  <fdir1>0 0 0</fdir1>
-</gazebo>
+    <collision> <surface> <bounce>
+      <restitution_coefficient>0</restitution_coefficient>
+      <threshold>100000</threshold>
+    </bounce> </surface> </collision>
+    <maxContacts>4</maxContacts>
+    <kp>18000000</kp>
+    <kd>100</kd>
+    <maxVel>100</maxVel>
+    <minDepth>0.0001</minDepth>
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <fdir1>0 0 0</fdir1>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_leg.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_right_leg" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_leg.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="r_hip_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_hip_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_hip_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_knee">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_ankle_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="r_ankle_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_head.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_head_without_eyes" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_head.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="neck_pitch">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="neck_roll">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo reference="neck_yaw">
     <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_arm.ini</yarpConfigurationFile>
-<initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_left_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_arm.ini</yarpConfigurationFile>
+      <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+    </plugin>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_left_hand" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_hand.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_left_hand" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_left_hand.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="l_shoulder_pitch">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_shoulder_roll">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_shoulder_yaw">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_elbow">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_wrist_roll">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_wrist_pitch">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="l_wrist_yaw">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_arm.ini</yarpConfigurationFile>
-<initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_right_arm_no_hand" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_arm.ini</yarpConfigurationFile>
+      <initialConfiguration>-0.52 0.52 0 0.785 0 0 0.0</initialConfiguration>
+    </plugin>
+  </gazebo>
   <gazebo>
-<plugin name="controlboard_right_hand" filename="libgazebo_yarp_controlboard.so">
-<yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_hand.ini</yarpConfigurationFile>
-</plugin>
-</gazebo>
+    <plugin name="controlboard_right_hand" filename="libgazebo_yarp_controlboard.so">
+      <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_right_hand.ini</yarpConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="r_shoulder_pitch">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_shoulder_roll">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_shoulder_yaw">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_elbow">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_wrist_roll">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_wrist_pitch">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo reference="r_wrist_yaw">
-  <implicitSpringDamper>1</implicitSpringDamper>
-</gazebo>
+    <implicitSpringDamper>1</implicitSpringDamper>
+  </gazebo>
   <gazebo>
-  <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
-    <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub.xml</yarpRobotInterfaceConfigurationFile>
-  </plugin>
-</gazebo>
+    <plugin name="robotinterface" filename="libgazebo_yarp_robotinterface.so">
+      <yarpRobotInterfaceConfigurationFile>model://ergoCub/conf/ergocub.xml</yarpRobotInterfaceConfigurationFile>
+    </plugin>
+  </gazebo>
   <gazebo reference="l_arm_ft_sensor">
     <sensor name="l_arm_ft_sensor" type="force_torque">
       <always_on>1</always_on>
@@ -2943,8 +2943,8 @@
       </force_torque>
       <pose>0.0 0.0 0.0 -3.1415923328972943 2.923917580150936e-08 -1.5707962214346844</pose>
       <plugin name="left_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_arm_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_arm_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="l_arm_ft_sensor" type="force_torque">
@@ -2965,8 +2965,8 @@
       </force_torque>
       <pose>0.0 0.0 0.0 -3.1415924092528633 -2.2277470853981803e-08 1.5707964070692688</pose>
       <plugin name="right_arm_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_arm_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_arm_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="r_arm_ft_sensor" type="force_torque">
@@ -2987,8 +2987,8 @@
       </force_torque>
       <pose>0.0 0.0 0.0 3.141592653589793 -0.0 2.6179934742070086</pose>
       <plugin name="left_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_leg_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_leg_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="l_leg_ft_sensor" type="force_torque">
@@ -3009,8 +3009,8 @@
       </force_torque>
       <pose>0.0 0.0 0.022299999999999986 0.0 -0.0 -2.0943952105869315</pose>
       <plugin name="left_foot_front_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_front_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_front_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="l_foot_front_ft_sensor" type="force_torque">
@@ -3031,8 +3031,8 @@
       </force_torque>
       <pose>0.0 0.0 0.022299999999999986 0.0 -0.0 -2.0943952105869315</pose>
       <plugin name="left_foot_rear_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_rear_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_left_foot_rear_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="l_foot_rear_ft_sensor" type="force_torque">
@@ -3053,8 +3053,8 @@
       </force_torque>
       <pose>0.0 0.0 0.0 3.141592653589793 0.0 -2.6179934742070086</pose>
       <plugin name="right_leg_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_leg_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_leg_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="r_leg_ft_sensor" type="force_torque">
@@ -3075,8 +3075,8 @@
       </force_torque>
       <pose>0.0 0.0 0.022299999999999986 0.0 -0.0 -2.0943952105869315</pose>
       <plugin name="right_foot_front_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_front_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_front_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="r_foot_front_ft_sensor" type="force_torque">
@@ -3097,8 +3097,8 @@
       </force_torque>
       <pose>0.0 0.0 0.022299999999999986 0.0 -0.0 -2.0943952105869315</pose>
       <plugin name="right_foot_rear_ft_plugin" filename="libgazebo_yarp_forcetorque.so">
-  <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_rear_ft.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/FT/gazebo_ergocub_right_foot_rear_ft.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="r_foot_rear_ft_sensor" type="force_torque">
@@ -3115,8 +3115,8 @@
       <update_rate>100</update_rate>
       <pose>-0.004299998 -0.0055 0.03823499999999996 3.141592653589793 -0.0 1.5707963267948966</pose>
       <plugin name="ergocub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-    <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_inertial.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_inertial.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="head_imu_0" type="accelerometer">
@@ -3129,30 +3129,30 @@
       <update_rate>30</update_rate>
       <pose>0.00751550026595621 0.010000000000000005 -4.911144457775407e-08 -1.5707962931078618 8.881784197001252e-16 -1.5707963267948954</pose>
       <camera name="intel_realsense_depth_camera">
-  <pose>0 0 0 -1.57079 -1.57079 3.14159</pose>
-  <horizontal_fov>1.57079</horizontal_fov>
-  <distortion>
-    <k1>0</k1>
-    <k2>0</k2>
-    <k3>0</k3>
-    <p1>0</p1>
-    <p2>0</p2>
-    <center>319.5 239.5</center>
-  </distortion>
-  <image>
-    <width>640</width>
-    <height>480</height>
-    <format>R8G8B8</format>
-  </image>
-  <clip>
-    <near>0.175</near>
-    <far>3000</far>
-  </clip>
-</camera>
+        <pose>0 0 0 -1.57079 -1.57079 3.14159</pose>
+        <horizontal_fov>1.57079</horizontal_fov>
+        <distortion>
+          <k1>0</k1>
+          <k2>0</k2>
+          <k3>0</k3>
+          <p1>0</p1>
+          <p2>0</p2>
+          <center>319.5 239.5</center>
+        </distortion>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.175</near>
+          <far>3000</far>
+        </clip>
+      </camera>
       <visualize>false</visualize>
       <plugin name="ergocub_yarp_gazebo_plugin_depthCamera" filename="libgazebo_yarp_depthCamera.so">
-    <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_rgbd_camera.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_rgbd_camera.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="realsense_head_depth" type="depth">
@@ -3165,30 +3165,30 @@
       <update_rate>30</update_rate>
       <pose>0.00751550026595621 -0.0115 -4.911144457775407e-08 -1.5707962931078618 8.881784197001252e-16 -1.5707963267948954</pose>
       <camera name="intel_realsense_rgb_camera">
-  <pose>0 0 0 -1.57079 -1.57079 3.14159</pose>
-  <horizontal_fov>1.2217</horizontal_fov>
-  <distortion>
-    <k1>0</k1>
-    <k2>0</k2>
-    <k3>0</k3>
-    <p1>0</p1>
-    <p2>0</p2>
-    <center>319.5 239.5</center>
-  </distortion>
-  <image>
-    <width>640</width>
-    <height>480</height>
-    <format>R8G8B8</format>
-  </image>
-  <clip>
-    <near>0.02</near>
-    <far>3000</far>
-  </clip>
-</camera>
+        <pose>0 0 0 -1.57079 -1.57079 3.14159</pose>
+        <horizontal_fov>1.2217</horizontal_fov>
+        <distortion>
+          <k1>0</k1>
+          <k2>0</k2>
+          <k3>0</k3>
+          <p1>0</p1>
+          <p2>0</p2>
+          <center>319.5 239.5</center>
+        </distortion>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>3000</far>
+        </clip>
+      </camera>
       <visualize>false</visualize>
       <plugin name="ergocub_yarp_gazebo_plugin_camera" filename="libgazebo_yarp_camera.so">
-    <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_rgb_camera.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_rgb_camera.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="realsense_head_rgb" type="camera">
@@ -3201,51 +3201,51 @@
       <update_rate>100</update_rate>
       <pose>0.00751550026595621 0.010000000000000005 -4.911144457775407e-08 -1.5707962931078618 8.881784197001252e-16 -1.5707963267948954</pose>
       <plugin name="ergocub_yarp_gazebo_plugin_IMU" filename="libgazebo_yarp_imu.so">
-    <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_realsense_inertial.ini</yarpConfigurationFile>
-</plugin>
+        <yarpConfigurationFile>model://ergoCub/conf/gazebo_ergocub_realsense_inertial.ini</yarpConfigurationFile>
+      </plugin>
     </sensor>
   </gazebo>
   <sensor name="realsense_imu_0" type="accelerometer">
     <parent link="realsense"/>
     <origin rpy="-1.5707962931078618 8.881784197001252e-16 -1.5707963267948954" xyz="0.00751550026595621 0.010000000000000005 -4.911144457775407e-08"/>
   </sensor>
-  <gazebo reference="head">
-    <sensor name="lasersensor_head" type="ray">
-      <always_on>1</always_on>
-      <update_rate>100</update_rate>
-      <pose>4.99999999999997e-05 0.0 0.13480199999999992 0.0 -0.0 1.5707963267948966</pose>
-      <always_on>1</always_on>
-      <visualize>true</visualize>
-      <update_rate>40</update_rate>
-      <ray name="head_laser_sensor">
-  <scan>
-    <horizontal>
-      <samples>360</samples>
-      <resolution>2</resolution>
-      <min_angle>0</min_angle>
-      <max_angle>6.28</max_angle>
-    </horizontal>
-  </scan>
-  <range>
-    <min>0.04</min>
-    <max>5</max>
-    <resolution>0.01</resolution>
-  </range>
-  <noise>
-    <type>gaussian</type>
-    <mean>0</mean>
-    <stddev>0.005</stddev>
-  </noise>
-</ray>
-      <plugin name="ergocub_yarp_gazebo_plugin_laser" filename="libgazebo_yarp_lasersensor.so">
-  <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_lidar.ini</yarpConfigurationFile>
-</plugin>
-    </sensor>
-  </gazebo>
-  <sensor name="lasersensor_head" type="ray">
-    <parent link="head"/>
-    <origin rpy="0.0 -0.0 1.5707963267948966" xyz="4.99999999999997e-05 0.0 0.13480199999999992"/>
-  </sensor>
+  <!-- <gazebo reference="head"> -->
+  <!--   <sensor name="lasersensor_head" type="ray"> -->
+  <!--     <always_on>1</always_on> -->
+  <!--     <update_rate>100</update_rate> -->
+  <!--     <pose>4.99999999999997e-05 0.0 0.13480199999999992 0.0 -0.0 1.5707963267948966</pose> -->
+  <!--     <always_on>1</always_on> -->
+  <!--     <visualize>true</visualize> -->
+  <!--     <update_rate>40</update_rate> -->
+  <!--     <ray name="head_laser_sensor"> -->
+  <!--       <scan> -->
+  <!--         <horizontal> -->
+  <!--           <samples>360</samples> -->
+  <!--           <resolution>2</resolution> -->
+  <!--           <min_angle>0</min_angle> -->
+  <!--           <max_angle>6.28</max_angle> -->
+  <!--         </horizontal> -->
+  <!--       </scan> -->
+  <!--       <range> -->
+  <!--         <min>0.04</min> -->
+  <!--         <max>5</max> -->
+  <!--         <resolution>0.01</resolution> -->
+  <!--       </range> -->
+  <!--       <noise> -->
+  <!--         <type>gaussian</type> -->
+  <!--         <mean>0</mean> -->
+  <!--         <stddev>0.005</stddev> -->
+  <!--       </noise> -->
+  <!--     </ray> -->
+  <!--     <plugin name="ergocub_yarp_gazebo_plugin_laser" filename="libgazebo_yarp_lasersensor.so"> -->
+  <!--       <yarpConfigurationFile>model://ergoCub/conf/sensors/gazebo_ergocub_lidar.ini</yarpConfigurationFile> -->
+  <!--     </plugin> -->
+  <!--   </sensor> -->
+  <!-- </gazebo> -->
+  <!-- <sensor name="lasersensor_head" type="ray"> -->
+  <!--   <parent link="head"/> -->
+  <!--   <origin rpy="0.0 -0.0 1.5707963267948966" xyz="4.99999999999997e-05 0.0 0.13480199999999992"/> -->
+  <!-- </sensor> -->
   <gazebo>
     <pose>0.0 0.0 0.9 0.0 0.0 0.0</pose>
   </gazebo>
